@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');    // pull information from HTML POST (
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 var db = require('./db/dbconnection.js');
-var Todo = require('./db/todo.models.js');
+var Todo = require('./db/todos.model.js');
 
 // configuration ======================
 
