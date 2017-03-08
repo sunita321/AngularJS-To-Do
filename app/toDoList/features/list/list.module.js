@@ -1,5 +1,7 @@
-angular.module('toDoList.list', [
+angular
+	.module('toDoList.list', [
 	'toDoList.component.navbar',
-	'toDoList.component.item',
-	'toDoList.component.table'
+	//'toDoList.component.item',
+	'toDoList.component.toDoApi'
+	
 	]);

@@ -6,8 +6,11 @@ angular
 
 		 // Features
 		'toDoList.list',
-		'toDoList.create',
-		'toDoList.completed',
+		//'toDoList.create',
+		//'toDoList.completed',
+		'toDoList.component.navbar',
+		//'toDoList.component.item',
+		'toDoList.component.toDoApi'
 		
 		])
 	.config(appConfig);

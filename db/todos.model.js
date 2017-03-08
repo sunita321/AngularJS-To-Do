@@ -1,8 +1,6 @@
 // Require Mongoose
 var mongoose = require('mongoose');
 
-// require the connection
-var db = require("../db/dbconnection");
 
 
 mongoose.Promise = Promise;
@@ -13,17 +11,9 @@ var Schema = mongoose.Schema;
 
 
 var TodoItems = new Schema ({
-	todo: {
-		type: String
-	},
-
-	completeBy: {
-		type: Date
-	},
-
-	completed: {
-		type: Boolean
-	}
+	todo: String,
+	completeBy: Date,
+	completed: {type:Boolean, default:false}
 });
 
 var Todo = mongoose.model('Todo', TodoItems);

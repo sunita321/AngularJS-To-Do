@@ -10,16 +10,24 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var db = require('./db/dbconnection.js');
 var Todo = require('./db/todos.model.js');
 
+// Require the routes and use them
+var routes = require('./api/apiRoutes');
+
+
+
 // configuration ======================
 
 app.use(express.static(__dirname + '/app'));
 // Use morgan and body parser with our app
 app.use(logger("dev"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.json({ type: 'application/*+json' }));
-app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
-app.use(bodyParser.text({ type: 'text/html' }));
+//app.use(bodyParser.json({ type: 'application/*+json' }));
+//app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
+//app.use(bodyParser.text({ type: 'text/html' }));
+
+// Import routes
+app.use('/', routes);
 
 // Launch App
 var port = process.env.PORT || 3000;

@@ -2,20 +2,15 @@ angular
 	.module('toDoList.list')
 	.controller('ListCtrl', ListCtrl);
 
-function ListCtrl(table, $http) 
+function ListCtrl($scope, toDoApi) 
 {
-	var vm = this;
+	
+        // create a message to display in our view
+        //$scope.items = ['Everyone come and see how good I look!', 'bla', 'jeff'];
+        $scope.message = 'Everyone come and see how good I look!';
 
-	vm.items = [];
-
-	  $http({
-		method: 'GET',
-		url: '/api/table'
-	}).then(function(response){
-		console.log(response);
-		//for each todo push into the todoData aray
-		response.data.forEach(function(element){
-			vm.items.push(element);
-		});
-	});
+    $scope.items = [];
+	
+	toDoApi.getTodo($scope.items);
 }
+

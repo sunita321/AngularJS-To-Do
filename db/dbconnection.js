@@ -6,6 +6,8 @@ mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/angularToDo');
 var db = mongoose.connection;
 
+
+
 // Show any mongoose errors
 db.on("error", function(error) 
 {

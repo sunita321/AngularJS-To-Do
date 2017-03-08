@@ -10,5 +10,8 @@ function listConfig($stateProvider)
 		templateUrl: '/toDoList/features/list/list.html',
 		controller: 'ListCtrl',
 		controllerAs: 'ListVM'
-	})
+	});
+
+	console.log('this is our listy');
 }
+
