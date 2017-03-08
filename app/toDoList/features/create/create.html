@@ -6,7 +6,6 @@
 <form>
 	To-Do: <input type="text" ng-model='CreateVM.items.toDoItem' name="item">
 	<br>
-	Due: <input type="date" ng-model='CreateVM.items.dueDate' name="dueDate">
-	<br>
-	<input type="button" value="Create" ng-click="CreateVM.addItem(CreateVM.items.toDoItem, CreateVM.items.dueDate)"> 
+	
+	<input type="button" value="Create" ng-click="CreateVM.addItem(CreateVM.items.toDoItem)"> 
 </form>

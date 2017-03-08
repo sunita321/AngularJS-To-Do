@@ -6,7 +6,7 @@ angular
 
 		 // Features
 		'toDoList.list',
-		//'toDoList.create',
+		'toDoList.create',
 		//'toDoList.completed',
 		'toDoList.component.navbar',
 		//'toDoList.component.item',
